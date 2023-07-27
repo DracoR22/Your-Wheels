@@ -55,7 +55,18 @@ const [isMounted, setIsMounted] = useState(false);
         toast.success('Post created!')
         
     } catch (error) {
-        toast.error('Something went wrong!')
+        if(axios.isAxiosError(error)) {
+          if(error.response?.status === 401) {
+             toast.error('Please login first')
+          } 
+
+          if(error.response?.status === 400) {
+            toast.error('Please fill all the fields')
+         } 
+
+        } else {
+          toast.error('Something went wrong!')
+        }
     } finally {
         setIsLoading(false)
     }
