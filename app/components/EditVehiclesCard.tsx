@@ -29,10 +29,10 @@ const handleCancel = useCallback((e: React.MouseEvent<HTMLButtonElement>) => {
   return (
     <div className="cursor-pointer">
       
-        <div className="w-full flex-shrink-0 bg-white rounded-xl p-4"
-         onClick={() => router.push(`vehicles/${vehicles.id}`)}>
+        <div className="w-full flex-shrink-0 bg-white rounded-xl p-4">
           <div className="aspect-square relative w-full overflow-hidden rounded-xl">
-            <Image alt="Vehicle" src={vehicles.images[0].url} fill className="object-cover w-full h-full" />
+            <Image alt="Vehicle" src={vehicles.images[0].url} fill
+             className="object-cover w-full h-full" onClick={() => router.push(`vehicles/${vehicles.id}`)}/>
           </div>
           <div className="pt-4">
             <h1 className="font-bold text-xl pb-1 truncate">{vehicles.title}</h1>
@@ -42,12 +42,16 @@ const handleCancel = useCallback((e: React.MouseEvent<HTMLButtonElement>) => {
             <p className="py-1 text-neutral-700">${vehicles.price} USD</p>
 
             {onAction && actionLabel && (
+              <>
               <Button small label={actionLabel} onClick={handleCancel}/>
+              <hr className="my-2"/>
+              <Button small label='Edit your vehicle information' onClick={() => router.push(`/edit-vehicles/${vehicles.id}`)}/>
+              </>
             )}
           </div>
         </div>
       
-
+  
     </div>
   );
 };
