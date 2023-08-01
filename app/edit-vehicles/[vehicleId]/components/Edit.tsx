@@ -178,7 +178,7 @@ const [isMounted, setIsMounted] = useState(false);
                       Price
                     </h1>
                     <FormControl>
-                    <Input disabled={isLoading} placeholder="Price of your vehicle" {...field}/>
+                    <Input type="number" disabled={isLoading} placeholder="Price of your vehicle" {...field}/>
                     </FormControl>
                 </FormItem>
             )}/>
