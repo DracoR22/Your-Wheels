@@ -23,7 +23,7 @@ const router = useRouter()
              className="object-cover w-full h-full hover:scale-110 transition" />
           </div>
           <div className="pt-4">
-            <h1 className="font-bold text-xl pb-1 truncate">{vehicle.title}</h1>
+            <h1 className="font-bold text-xl pb-1 truncate">{vehicle.title.charAt(0).toUpperCase() + vehicle.title.slice(1)}</h1>
             <hr className="pb-2" />
             <p className="text-neutral-700">{vehicle.location}</p>
             <h3 className="pt-2 font-semibold text-lg">Price</h3>

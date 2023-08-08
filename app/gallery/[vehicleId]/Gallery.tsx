@@ -19,11 +19,12 @@ const Gallery: React.FC<GalleryProps> = ({vehicle}) => {
   return (
     <div className="flex flex-col gap-4 md:flex-row md:gap-0 rounded-xl p-3">
 
-      <div className="-mt-[31px] w-full cursor-pointer" onClick={() => router.back()}>
-          <AiOutlineArrowLeft size={45}/>
+      <div className="-mt-[38px] cursor-pointer bg-white rounded-full p-4"
+       onClick={() => router.back()}>
+          <AiOutlineArrowLeft size={35}/>
       </div>
 
-      <div className="absolute right-0 left-0 mt-8">
+      <div className="absolute right-0 left-0 mt-8 mx-[100px]">
         <Image src={mainImage} alt="Main"
          className="h-auto w-full object-cover rounded-lg"
          width={600} height={500}/>

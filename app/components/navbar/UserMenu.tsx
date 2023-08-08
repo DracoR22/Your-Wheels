@@ -99,29 +99,7 @@ useEffect(() => {
        
     </div>
 
-    <div className="block md:hidden">
-
-{!currentUser && (
-  <div className='cursor-pointer mx-4' onClick={toggleOpen}>
-     {isOpen ? <AiOutlineClose size={25}/> : <AiOutlineMenu size={25}/>}
-   </div>
- )}
- 
- {isOpen && (
-  <div className='absolute right-0 top-20 w-[40vh] rounded-md bg-white overflow-hidden 
- text-sm'>
-    <div className='flex flex-col cursor-pointer'>
-      {!currentUser && (
-        <>
-      <MenuItem onClick={registerModal.onOpen} label='Sign In'/>
-      <MenuItem onClick={loginModal.onOpen} label='Log In'/>
-      <MenuItem onClick={registerModal.onOpen} label='Post my vehicle'/>
-        </>
-      )}
-    </div>
-  </div>
- )}
-</div>
+   
     </>
   )
 }

@@ -35,7 +35,7 @@ const handleCancel = useCallback((e: React.MouseEvent<HTMLButtonElement>) => {
              className="object-cover w-full h-full" onClick={() => router.push(`vehicles/${vehicles.id}`)}/>
           </div>
           <div className="pt-4">
-            <h1 className="font-bold text-xl pb-1 truncate">{vehicles.title}</h1>
+            <h1 className="font-bold text-xl pb-1 truncate">{vehicles.title.charAt(0).toUpperCase() + vehicles.title.slice(1)}</h1>
             <hr className="pb-2" />
             <p className="text-neutral-700">{vehicles.location}</p>
             <h3 className="pt-2 font-semibold text-lg">Price</h3>

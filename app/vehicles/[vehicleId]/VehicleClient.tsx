@@ -64,7 +64,7 @@ const VehicleGallery: React.FC<VehicleGalleryProps> = ({ vehicle, currentUser })
             </p>
           </div>
           <h1 className="font-bold text-2xl">
-          {vehicle.title}
+          {vehicle.title.charAt(0).toUpperCase() + vehicle.title.slice(1)}
           </h1>
           <p className="text-neutral-600 text-xl my-6">
            $ {vehicle.price} USD

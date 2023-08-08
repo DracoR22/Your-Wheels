@@ -115,7 +115,7 @@ const [isMounted, setIsMounted] = useState(false);
                       Vehicle:
                     </h1>
                     <FormControl>
-                      <Input disabled={isLoading} placeholder="Title of your vehicle" {...field}/>
+                      <Input disabled={isLoading} placeholder="Title of your vehicle" {...field}  onChange={(e) => field.onChange(e.target.value.toLowerCase())}/>
                     </FormControl>
                 </FormItem>
             )}/>
