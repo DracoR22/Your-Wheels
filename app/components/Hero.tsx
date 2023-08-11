@@ -8,7 +8,7 @@ const Hero = () => {
 
 const slides = [
   {
-    url: '/banner/forerunner.jpg'
+    url: '/banner/ram.jpg'
   },
   {
     url: '/banner/herowheels.jpg'
@@ -17,7 +17,7 @@ const slides = [
     url: '/banner/pbanner.jpg'
   },
   {
-    url: '/banner/ram.jpg'
+    url: '/banner/forerunner.jpg'
   },
 ];
 
@@ -46,10 +46,10 @@ const nextSlide = () => {
 }
 
 useEffect(() => {
-  // Auto slide every 4 seconds
+  // Auto slide every 5 seconds
   const interval = setInterval(() => {
     nextSlide();
-  }, 4000);
+  }, 5000);
 
   return () => {
     clearInterval(interval);
@@ -58,7 +58,7 @@ useEffect(() => {
 
   return (
     <div className='h-[400px] w-full m-auto px-4 relative group'>
-       <div style={{backgroundImage: `url(${slides[currentIndex].url})`}} className='w-full h-full rounded-2xl bg-center bg-cover duration-500'> </div>
+       <div style={{backgroundImage: `url(${slides[currentIndex].url})`}} className='w-full h-full rounded-2xl bg-center bg-cover duration-300'> </div>
        {/* Left Arrow */}
        <div className='hidden group-hover:block absolute top-[50%] -translate-x-0 translate-y-[-50%] left-5 text-2xl rounded-full p-2 bg-black/20 cursor-pointer'>
         <BsChevronCompactLeft onClick={prevSlide} size={30} color='white'/>
