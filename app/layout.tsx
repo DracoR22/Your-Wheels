@@ -34,6 +34,8 @@ export default async function RootLayout({
         <Navbar currentUser={currentUser}/>
         <div className='pb-20 pt-28'>
         {children}
+        {/* <script data-ai-id="5816fa81-61ef-4c2b-88e7-084f3e7ac5c1" src="https://linked-forge-ai.vercel.app/widget.js"></script> */}
+        <script data-ai-id="5816fa81-61ef-4c2b-88e7-084f3e7ac5c1" src="https://linked-forge-ai.vercel.app/widget.js"></script>
         </div>
         </QueryProvider>
       </body>
